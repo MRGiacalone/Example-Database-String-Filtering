@@ -6,8 +6,11 @@ In the script you should:
 Define filters to leave out of DB strings. Example: filt = ("Not", "Another", "Filter")
 # filt = ([], [], [])
 
-Define input file name and location for DB. Example: file = 'X:/XYZ/123/FILENAME'
-# file = []
+Define input file name and location of DB. Example: file = 'X:/XYZ/123/FILENAME'
+# fileI = []
+
+Define output path and file name. Example: file = 'X:/XYZ/123/NEWFILENAME'
+# fileO = []
 
 Default separator ";"
 # base = pd.read_csv(file, sep=';')
