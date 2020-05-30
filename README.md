@@ -4,7 +4,7 @@ The file DB Filter Script.py is an example of a script for to: Remove all string
 In the script you should:
 
 Define filters to leave out of DB strings. Example: stringFilter = ("Not", "Another", "Filter")
-# stringFilter = ([], [], [])
+# stringFilter = ([], [], [], etc)
 
 Define input file name and location of DB. Example: fileInput = 'X:/XYZ/123/FILENAME'
 # fileInput = []
