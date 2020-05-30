@@ -3,12 +3,12 @@ Example of a Script for filtering a DB: Remove strings atarting with Filt, keep 
 
 Define filters to leave out of DB strings. Example: filt = ("Not", "Another", "Filter")
 
-filt = ([], [], [])
+# filt = ([], [], [])
 
 Define input file name and location for DB. Example: file = 'X:/XYZ/123/FILENAME'
 
-file = []
+# file = []
 
 Default separator ";"
 
-base = pd.read_csv(file, sep=';')
+# base = pd.read_csv(file, sep=';')
