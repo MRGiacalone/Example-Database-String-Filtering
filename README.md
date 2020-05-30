@@ -3,14 +3,14 @@ The file DB Filter Script.py is an example of a script for to: Remove all string
 
 In the script you should:
 
-Define filters to leave out of DB strings. Example: filt = ("Not", "Another", "Filter")
-# filt = ([], [], [])
+Define filters to leave out of DB strings. Example: stringFilter = ("Not", "Another", "Filter")
+# stringFilter = ([], [], [])
 
-Define input file name and location of DB. Example: file = 'X:/XYZ/123/FILENAME'
-# fileI = []
+Define input file name and location of DB. Example: fileInput = 'X:/XYZ/123/FILENAME'
+# fileInput = []
 
-Define output path and file name. Example: file = 'X:/XYZ/123/NEWFILENAME'
-# fileO = []
+Define output path and file name. Example: fileOutput = 'X:/XYZ/123/NEWFILENAME'
+# fileOutput = []
 
 Default separator ";"
-# base = pd.read_csv(file, sep=';')
+# base = pd.read_csv(fileInput, sep=';')
