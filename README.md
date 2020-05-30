@@ -1,4 +1,4 @@
-# Example Database String Filtering Script
+# Example Database Clening and String Filtering Script
 The file DB Filter Script.py is an example of a script for to: Remove all strings starting with the words defined in Filt, keep first column only, and strip column names. The single column result will be written to the output file named "NewDatabase.txt"
 
 In the script you should:
