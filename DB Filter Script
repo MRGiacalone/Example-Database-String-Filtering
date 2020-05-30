@@ -4,7 +4,7 @@ Created on Sat May 30 14:14:14 2020
 
 @author: MRGiacalone
 """
-import modin.pandas as pd
+import pandas as pd
 
 # DB Filter Script
 # ============================================================================================================
@@ -14,18 +14,26 @@ import modin.pandas as pd
 # Define filters to leave out of DB. Example: filt = ("Not", "Another", "Filter")
 filt = ([], [], [])
 
-# Define file name. Example: file = 'X:/XYZ/123/FILENAME'
-file = []
+# Define input path and file name. Example: file = 'X:/XYZ/123/FILENAME'
+fileI = []
 
-# Default separator ";"
-base = pd.read_csv(file, sep=';')
+# Define output path and file name. Example: file = 'X:/XYZ/123/NEWFILENAME'
+fileO = []
 
+# Default separator ";".
+print('Reading DB.....')
+base = pd.read_csv(fileI, sep=';')
+print('Reading Done!')
+
+print('Modifying DB.....')
 base = base.iloc[:, [0]]
 base.columns=['Col1']
 base = base[~base.Col1.str.startswith(filt)]
 base.reset_index(drop=True, inplace=True)
-print(base.iloc[:10])
 base.drop(base.tail(1).index,inplace=True)
+print('Modifying Done!')
 
 # Write the first column to the output file named "NewDatabase.txt"
-base.to_csv(r'NewDatabase.txt', mode='a', header=False, index = None)
+print('Writing DB.....')
+base.to_csv(fileO, mode='a', header=False, index = None)
+print('All Done!')
