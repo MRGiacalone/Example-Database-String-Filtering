@@ -27,5 +27,5 @@ base.reset_index(drop=True, inplace=True)
 print(base.iloc[:10])
 base.drop(base.tail(1).index,inplace=True)
 
-# Write to file named NewDatabase.txt
+# Write the first column to the output file named "NewDatabase.txt"
 base.to_csv(r'NewDatabase.txt', mode='a', header=False, index = None)
